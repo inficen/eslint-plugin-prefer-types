@@ -2,41 +2,30 @@
  * @fileoverview prefer types over interface
  * @author Lionel Tay
  */
-import { Rule } from "eslint";
+import { ruleCreator } from "utils";
 
-//------------------------------------------------------------------------------
-// Rule Definition
-//------------------------------------------------------------------------------
-
-const rule: Rule.RuleModule = {
+const rule = ruleCreator({
+  name: "uppercase-first-declarations",
   meta: {
-    type: "suggestion",
     docs: {
       description: "prefer types over interface",
-      recommended: false,
-      url: "https://github.com/inficen/eslint-plugin-prefer-types",
+      recommended: "warn",
     },
-    fixable: "code",
+    messages: {
+      uppercase: "Start this name with an upper-case letter.",
+    },
+    type: "suggestion",
     schema: [],
   },
+  defaultOptions: [],
 
   create(context) {
-    // variables should be defined here
-
-    //----------------------------------------------------------------------
-    // Helpers
-    //----------------------------------------------------------------------
-
-    // any helper functions should go here or else delete this section
-
-    //----------------------------------------------------------------------
-    // Public
-    //----------------------------------------------------------------------
-
     return {
-      // visitor functions for different types of nodes
+      TSInterfaceBody: (node) => {
+        console.log(node);
+      },
     };
   },
-};
+});
 
 export default rule;

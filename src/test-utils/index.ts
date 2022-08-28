@@ -1,5 +1,5 @@
-import { RuleTester } from "eslint";
+import { ESLintUtils } from "@typescript-eslint/utils";
 
-export const ruleTester = new RuleTester({
-  parser: require.resolve("@typescript-eslint/parser"),
+export const ruleTester = new ESLintUtils.RuleTester({
+  parser: "@typescript-eslint/parser",
 });
