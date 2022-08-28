@@ -17,9 +17,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.18.10",
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.18.6",
     "@types/eslint": "^8.4.6",
     "@types/node": "^18.7.13",
     "@types/requireindex": "^1.2.0",
