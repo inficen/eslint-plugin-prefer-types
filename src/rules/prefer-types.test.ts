@@ -8,9 +8,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/prefer-types"),
-  RuleTester = require("eslint").RuleTester;
-
+import rule from "./prefer-types";
+import { RuleTester } from "eslint";
 
 //------------------------------------------------------------------------------
 // Tests
