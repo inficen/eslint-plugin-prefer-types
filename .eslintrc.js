@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports = {
   root: true,
   extends: [
@@ -7,13 +5,22 @@ module.exports = {
     "plugin:eslint-plugin/recommended",
     "plugin:node/recommended",
   ],
+  plugins: ["@typescript-eslint"],
   env: {
     node: true,
   },
   overrides: [
     {
-      files: ["tests/**/*.js"],
-      env: { mocha: true },
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
+      },
+      files: ["**/*.ts"],
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
     },
   ],
 };

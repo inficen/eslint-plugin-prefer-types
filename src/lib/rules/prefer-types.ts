@@ -2,14 +2,13 @@
  * @fileoverview prefer types over interface
  * @author Lionel Tay
  */
-"use strict";
+import { Rule } from "eslint";
 
 //------------------------------------------------------------------------------
 // Rule Definition
 //------------------------------------------------------------------------------
 
-/** @type {import('eslint').Rule.RuleModule} */
-module.exports = {
+const rule: Rule.RuleModule = {
   meta: {
     type: null, // `problem`, `suggestion`, or `layout`
     docs: {
@@ -39,3 +38,5 @@ module.exports = {
     };
   },
 };
+
+export default rule;
