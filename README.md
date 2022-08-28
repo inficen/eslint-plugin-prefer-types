@@ -10,10 +10,10 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-prefer-types`:
+Next, install `@inficen/eslint-plugin-prefer-types`:
 
 ```sh
-npm install eslint-plugin-prefer-types --save-dev
+npm install @inficen/eslint-plugin-prefer-types --save-dev
 ```
 
 ## Usage
@@ -22,25 +22,20 @@ Add `prefer-types` to the plugins section of your `.eslintrc` configuration file
 
 ```json
 {
-    "plugins": [
-        "prefer-types"
-    ]
+  "plugins": ["@inficen/prefer-types"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "prefer-types/rule-name": 2
-    }
+  "rules": {
+    "prefer-types/rule-name": "warn"
+  }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
+- Fill in provided rules here

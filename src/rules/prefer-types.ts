@@ -10,14 +10,14 @@ import { Rule } from "eslint";
 
 const rule: Rule.RuleModule = {
   meta: {
-    type: null, // `problem`, `suggestion`, or `layout`
+    type: "suggestion",
     docs: {
       description: "prefer types over interface",
       recommended: false,
-      url: null, // URL to the documentation page for this rule
+      url: "https://github.com/inficen/eslint-plugin-prefer-types",
     },
-    fixable: null, // Or `code` or `whitespace`
-    schema: [], // Add a schema if the rule has options
+    fixable: "code",
+    schema: [],
   },
 
   create(context) {

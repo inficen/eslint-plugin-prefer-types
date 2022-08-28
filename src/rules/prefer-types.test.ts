@@ -9,13 +9,12 @@
 //------------------------------------------------------------------------------
 
 import rule from "./prefer-types";
-import { RuleTester } from "eslint";
+import { ruleTester } from "test-utils";
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester();
 ruleTester.run("prefer-types", rule, {
   valid: [
     // give me some code that won't trigger a warning
@@ -23,7 +22,7 @@ ruleTester.run("prefer-types", rule, {
 
   invalid: [
     {
-      code: "interface { name: string }",
+      code: "interface Person { name: string }",
       errors: [{ message: "Fill me in.", type: "Me too" }],
     },
   ],
