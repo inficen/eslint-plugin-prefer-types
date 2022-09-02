@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "something": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
+    "bump": "conventional-github-releaser -p conventionalcommits",
     "clean": "rimraf dist",
     "build": "yarn clean && babel src --out-dir dist -x .ts --ignore **/*.test.ts",
     "build:old": "yarn clean && tsc -p tsconfig.build.json",
@@ -35,6 +36,7 @@
     "@typescript-eslint/parser": "^5.35.1",
     "@typescript-eslint/utils": "^5.35.1",
     "babel-plugin-tsconfig-paths-module-resolver": "^1.0.3",
+    "conventional-recommended-bump": "^6.1.0",
     "eslint": "^8.19.0",
     "eslint-plugin-eslint-plugin": "^5.0.0",
     "husky": "^8.0.0",
