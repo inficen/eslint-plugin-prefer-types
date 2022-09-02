@@ -1,5 +1,12 @@
 import { ruleCreator } from "utils";
 
+type Options = [
+  {
+    whitelist?: string[];
+    whitelistPrefix?: string[];
+  }
+];
+
 const rule = ruleCreator({
   name: "uppercase-first-declarations",
   meta: {
@@ -11,13 +18,43 @@ const rule = ruleCreator({
       useType: "Prefer using `type` over `interface`",
     },
     type: "suggestion",
-    schema: [],
+    schema: [
+      {
+        type: "object",
+        properties: {
+          whitelist: {
+            type: "array",
+            items: { type: "string" },
+          },
+          whitelistPrefix: {
+            type: "array",
+            items: { type: "string" },
+          },
+        },
+        additionalProperties: false,
+      },
+    ],
   },
-  defaultOptions: [],
+  defaultOptions: [{ whitelist: [] }] as Options,
 
   create(context) {
+    const whitelist = context.options[0]?.whitelist || [];
+    const whitelistPrefix = context.options[0]?.whitelistPrefix || [];
+
     return {
-      TSInterfaceBody: (node) => {
+      TSInterfaceDeclaration: (node) => {
+        const interfaceName = node.id.name;
+        if (whitelist.length > 0 && whitelist.includes(interfaceName)) {
+          return;
+        }
+
+        if (
+          whitelistPrefix.length > 0 &&
+          whitelistPrefix.some((prefix) => interfaceName.startsWith(prefix))
+        ) {
+          return;
+        }
+
         context.report({
           messageId: "useType",
           node,
