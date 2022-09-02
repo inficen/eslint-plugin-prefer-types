@@ -10,6 +10,9 @@
   "author": "Lionel Tay",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "build": "yarn clean && babel src --out-dir dist -x .ts --ignore **/*.test.ts",
