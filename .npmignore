@@ -1,0 +1,6 @@
+*
+src
+node_modules
+docs
+demo
+!dist/**

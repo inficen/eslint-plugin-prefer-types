@@ -1,6 +1,6 @@
 {
   "name": "@inficen/eslint-plugin-prefer-types",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "prefer Typescript types over interfaces",
   "keywords": [
     "eslint",
