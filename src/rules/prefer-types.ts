@@ -1,7 +1,3 @@
-/**
- * @fileoverview prefer types over interface
- * @author Lionel Tay
- */
 import { ruleCreator } from "utils";
 
 const rule = ruleCreator({
@@ -12,7 +8,7 @@ const rule = ruleCreator({
       recommended: "warn",
     },
     messages: {
-      uppercase: "Start this name with an upper-case letter.",
+      useType: "Prefer using `type` over `interface`",
     },
     type: "suggestion",
     schema: [],
@@ -22,7 +18,10 @@ const rule = ruleCreator({
   create(context) {
     return {
       TSInterfaceBody: (node) => {
-        console.log(node);
+        context.report({
+          messageId: "useType",
+          node,
+        });
       },
     };
   },

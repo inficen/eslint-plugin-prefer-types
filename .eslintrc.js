@@ -1,3 +1,4 @@
+/** @type {import('@types/eslint').Linter.Config} */
 module.exports = {
   root: true,
   extends: ["eslint:recommended", "plugin:eslint-plugin/recommended"],

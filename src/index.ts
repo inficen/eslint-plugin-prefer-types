@@ -1,18 +1,5 @@
-/**
- * @fileoverview prefer Typescript types over interfaces
- * @author Lionel Tay
- */
-"use strict";
+import preferTypes from "./rules/prefer-types";
 
-//------------------------------------------------------------------------------
-// Requirements
-//------------------------------------------------------------------------------
-
-import requireIndex from "requireindex";
-
-//------------------------------------------------------------------------------
-// Plugin Definition
-//------------------------------------------------------------------------------
-
-// import all rules in lib/rules
-export const rules = requireIndex(__dirname + "/rules");
+export const rules = {
+  "prefer-types": preferTypes,
+};
