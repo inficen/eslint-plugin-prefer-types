@@ -39,7 +39,8 @@
     "semantic-release": "^19.0.5"
   },
   "engines": {
-    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0",
+    "pnpm": ">=5"
   },
   "peerDependencies": {
     "eslint": ">=7"
