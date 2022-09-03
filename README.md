@@ -29,7 +29,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "prefer-types/prefer-types": "warn"
+    "@inficen/prefer-types/prefer-types": "warn"
   }
 }
 ```
@@ -47,7 +47,7 @@ A minimal configuration would look as follows
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "@inficen/prefer-types"],
   "rules": {
-    "prefer-types/prefer-types": "warn"
+    "@inficen/prefer-types/prefer-types": "warn"
   }
 }
 ```
