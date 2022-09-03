@@ -23,6 +23,8 @@ jobs:
         run: yarn lint
       - name: Run Tests
         run: yarn test
+      - name: Build Package
+        run: yarn build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
