@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "something": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
-    "bump": "npm version $(conventional-recommended-bump -p conventionalcommits) && git push --tags",
+    "bump": "npm version $(conventional-recommended-bump -p conventionalcommits) && git push && git push --tags",
     "clean": "rimraf dist",
     "build": "yarn clean && babel src --out-dir dist -x .ts --ignore **/*.test.ts",
     "build:old": "yarn clean && tsc -p tsconfig.build.json",
