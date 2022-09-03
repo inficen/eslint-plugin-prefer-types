@@ -2,11 +2,6 @@
   "name": "@inficen/eslint-plugin-prefer-types",
   "version": "0.0.11",
   "description": "prefer Typescript types over interfaces",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
   "author": "Lionel Tay",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
@@ -56,5 +51,16 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "typescript",
+    "type",
+    "types",
+    "interface",
+    "prefer",
+    "prefer-types"
+  ]
 }
