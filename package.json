@@ -53,5 +53,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/inficen/eslint-plugin-prefer-types.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
