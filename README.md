@@ -1,4 +1,4 @@
-# eslint-plugin-prefer-types
+# @inficen/eslint-plugin-prefer-types
 
 ## Installation
 
