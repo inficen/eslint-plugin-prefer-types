@@ -1,4 +1,4 @@
-# @inficen/eslint-plugin-prefer-types
+# @inficen/eslint-plugin-prefer-types &middot; [![npm version](https://badge.fury.io/js/@inficen%2Feslint-plugin-prefer-types.svg)](https://badge.fury.io/js/@inficen%2Feslint-plugin-prefer-types)
 
 ## Installation
 
