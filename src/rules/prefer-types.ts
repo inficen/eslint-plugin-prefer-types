@@ -8,7 +8,7 @@ type Options = [
 ];
 
 const rule = ruleCreator({
-  name: "uppercase-first-declarations",
+  name: "prefer-types",
   meta: {
     docs: {
       description: "prefer types over interface",
